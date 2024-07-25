@@ -40,12 +40,15 @@ function App() {
     <div className='wrap'>
       <div>
         <div>
-          <div onClick={clickHandler} className='btn'>Random</div>
-          <div onClick={clickClearHandler} className='btn'>Clear</div>
+          <div className='btns'>
+            <div onClick={clickHandler} className='btn btn-rand'>Random</div>
+            <div onClick={clickClearHandler} className='btn btn-clear'>Clear</div>
+          </div>
           <textarea
             id='text'
             className='textarea'
             onChange={textareaHandle}
+            placeholder='Введите никнеймы. Каждый на новой строке'
           />
         </div>
       </div>
