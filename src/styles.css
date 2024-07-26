@@ -29,7 +29,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: url('/src/assets/bg_smoke.png');
+  background-image: url('/src/assets/bg_smoke.gif');
   background-size: cover;
   filter: blur(0.15rem) brightness(0.2);
 }
