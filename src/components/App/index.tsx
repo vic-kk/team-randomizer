@@ -10,6 +10,7 @@ import { Controls } from '../Controls';
 function App() {
   const [ gamers, setGamers ] = useState<string>(getLS());
   const [ result, setResult ] = useState<TResult>([]);
+  const [ lastUpdate, setLastUpdate ] = useState<string>();
 
   const textareaHandle = (
     e: ChangeEvent<HTMLTextAreaElement>,
@@ -21,10 +22,14 @@ function App() {
       setTimeout(() => {
         shuffle(gamers, setResult);
       }, 150);
+      setLastUpdate(new Date().toLocaleString());
     },
     variant: 'REGROUP',
   },{
-    onClick: () => setResult([]),
+    onClick: () => {
+      setResult([]);
+      setLastUpdate('');
+    },
     variant: 'CLEAR',
   }]
 
@@ -38,7 +43,10 @@ function App() {
         />
       </div>
 
-      <Result result={result} />
+      <div>
+        <div className='time-stamp'>Updated: {lastUpdate}</div>
+        <Result result={result} />
+      </div>
     </div>
   )
 }

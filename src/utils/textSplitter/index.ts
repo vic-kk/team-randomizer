@@ -3,11 +3,13 @@ import { ChangeEvent } from "react";
 export type TResultItem = (string | undefined)[];
 export type TResult = TResultItem[];
 
+const EXCLUDE = ['/','\\','.','_','-','=',','];
+
 export const shuffle = (
   gamers: string,
   func: (val: TResult) => void,
 ) => {
-  const init = gamers.split('\n').filter((i) => (!!i.trim() && i[0] !== '-'));
+  const init = gamers.split('\n').filter((i) => (!!i.trim() && !EXCLUDE.includes(i[0])));
   const b:TResultItem = [];
   const pairs: TResult = [];
   while(init.length > 0) {

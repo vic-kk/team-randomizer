@@ -10,3 +10,8 @@
   flex-direction: column;
   gap: 1rem;
 }
+
+.time-stamp {
+  color: white;
+  margin-bottom: 0.5rem;
+}
