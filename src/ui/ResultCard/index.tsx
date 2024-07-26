@@ -29,7 +29,7 @@ const ResultCard: FC<TResultCardProps> = ({ id, pair }) => {
         key={`${user}${idx}`}  
         className='card-gamer'
         title={user}
-      >{trimUserName(user, 23)}</div>
+      >{trimUserName(user, 20)}</div>
     ))}
   </div>
 )}
