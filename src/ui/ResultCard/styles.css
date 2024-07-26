@@ -6,7 +6,7 @@
   opacity: 0;
   box-sizing: border-box;
   animation-name: show;
-  animation-duration: 1s;
+  animation-duration: .75s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
 }

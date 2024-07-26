@@ -10,7 +10,7 @@ type TResultCardProps = {
 const ResultCard: FC<TResultCardProps> = ({ id, pair }) => (
   <div
     className='card'
-    style={{animationDelay: `${id * 500}ms`}}
+    style={{animationDelay: `${id * 250}ms`}}
   >
     <div className='card-head'>
       <div className='card-head-id'>{id}</div>
