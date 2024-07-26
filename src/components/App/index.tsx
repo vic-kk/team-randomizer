@@ -44,7 +44,7 @@ function App() {
       </div>
 
       <div>
-        <div className='time-stamp'>Updated: {lastUpdate}</div>
+        {lastUpdate && <div className='time-stamp'>Updated: {lastUpdate}</div>}
         <Result result={result} />
       </div>
     </div>
