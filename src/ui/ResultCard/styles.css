@@ -1,11 +1,14 @@
-.card-wrap {
+.card {
   display: flex;
   flex-direction: column;
   gap: .2rem;
   width: 16rem;
-  /* padding: .2rem; */
+  opacity: 0;
   box-sizing: border-box;
-  /* border: 2px solid lightgrey; */
+  animation-name: show;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
 
 .card-head {
@@ -47,4 +50,13 @@
   color: white;
   font-weight: 500;
   font-size: 1.2rem;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

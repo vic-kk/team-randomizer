@@ -16,7 +16,12 @@ function App() {
   ) => text(e, setGamers);
 
   const controlsConfig: TButtonProps[] = [{
-    onClick: () => shuffle(gamers, setResult),
+    onClick: () => {
+      setResult([]);
+      setTimeout(() => {
+        shuffle(gamers, setResult);
+      }, 150);
+    },
     variant: 'REGROUP',
   },{
     onClick: () => setResult([]),
