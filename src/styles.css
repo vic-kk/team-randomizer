@@ -30,9 +30,9 @@ body {
   left: 0;
   z-index: -1;
   /* bg image */
-  /* background-image: url('/src/assets/tenor.gif'); */
-  background-image: url('/src/assets/roach.gif');
-  background-size: contain;
+  background-image: url('/src/assets/tenor.gif');
+  /* background-image: url('/src/assets/roach.gif'); */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   filter: blur(0.15rem) brightness(0.2);
