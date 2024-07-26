@@ -29,8 +29,12 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: url('/src/assets/tenor.gif');
+  /* bg image */
+  /* background-image: url('/src/assets/tenor.gif'); */
+  background-image: url('/src/assets/roach.gif');
   background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   filter: blur(0.15rem) brightness(0.2);
 }
 
