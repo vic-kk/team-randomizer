@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #444444;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,28 +21,27 @@ body {
   min-height: 100vh;
 }
 
-.wrap {
-  display: flex;
-  flex-direction: row;
-  gap: 1vw;
-  text-align: left;
+#bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url('/src/assets/bg_smoke.png');
+  background-size: cover;
+  filter: blur(0.15rem) brightness(0.2);
 }
 
-.textarea,
-.output {
-  width: 40vw;
-  min-height: 350px;
-  overflow-y: scroll;
-}
-
-.output {
-  border: 1px solid black;
+#root {
+  margin: 0 auto;
+  padding: 1vw;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #292929;
   }
   a:hover {
     color: #747bff;

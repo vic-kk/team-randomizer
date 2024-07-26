@@ -1,1 +1,1 @@
-export { tester } from './textSplitter';
+export * from './textSplitter';
