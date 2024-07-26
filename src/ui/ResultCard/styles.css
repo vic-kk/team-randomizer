@@ -9,6 +9,7 @@
   animation-duration: .75s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
+  user-select: none;
 }
 
 .card-head {

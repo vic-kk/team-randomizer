@@ -7,7 +7,15 @@ type TResultCardProps = {
   id: number,
 }
 
-const ResultCard: FC<TResultCardProps> = ({ id, pair }) => (
+const trimUserName = (str: string, length: number) => {
+  if (str.length <= length) {
+    return str;
+  }
+  return str.substring(0, length-3)+'...';
+}
+
+const ResultCard: FC<TResultCardProps> = ({ id, pair }) => {
+  return (
   <div
     className='card'
     style={{animationDelay: `${id * 250}ms`}}
@@ -18,11 +26,12 @@ const ResultCard: FC<TResultCardProps> = ({ id, pair }) => (
     </div>
     {pair?.map((user, idx) => user && (
       <div
+        key={`${user}${idx}`}  
         className='card-gamer'
-        key={`${user}${idx}`}
-      >{user}</div>
+        title={user}
+      >{trimUserName(user, 23)}</div>
     ))}
   </div>
-)
+)}
 
 export { ResultCard }
