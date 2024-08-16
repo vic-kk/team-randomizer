@@ -1,0 +1,7 @@
+.select {
+  width: 2.5rem;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  border-color: transparent;
+}

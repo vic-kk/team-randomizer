@@ -1,7 +1,5 @@
 import { ChangeEvent } from "react";
-
-export type TResultItem = (string | undefined)[];
-export type TResult = TResultItem[];
+import { type TResult, type TResultItem } from "../types";
 
 const EXCLUDE = ['/','\\','.','_','-','=',','];
 

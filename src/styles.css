@@ -30,7 +30,7 @@ body {
   left: 0;
   z-index: -1;
   /* bg image */
-  background-image: url('/src/assets/tenor.gif');
+  background-image: url('/src/assets/bg/tenor.gif');
   /* background-image: url('/src/assets/roach.gif'); */
   background-size: cover;
   background-position: center;

@@ -3,11 +3,11 @@ import { Button, type TButtonProps } from '../../ui/Button';
 
 import './styles.css';
 
-type TControlsProps = {
+type TControlButtonsProps = {
   config?: TButtonProps[],
 }
 
-const Controls: FC<TControlsProps> = ({ config }) => {
+const ControlButtons: FC<TControlButtonsProps> = ({ config }) => {
   return (
     <div className='controls'>
       {config?.map((item, idx) => 
@@ -17,4 +17,4 @@ const Controls: FC<TControlsProps> = ({ config }) => {
   )
 }
 
-export { Controls }
+export { ControlButtons }

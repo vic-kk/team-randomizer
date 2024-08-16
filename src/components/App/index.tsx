@@ -1,12 +1,13 @@
 import { ChangeEvent, useState } from 'react'
-import { getGamersLS, type TResult, text, shuffle, getSizeLS, setSizeLS, filterGamers } from '../../utils';
+import { getGamersLS, text, shuffle, getSizeLS, setSizeLS, filterGamers } from '../../utils';
 import { TButtonProps } from '../../ui/Button';
 import { Textarea } from '../../ui/Textarea';
-import { Result } from '../Result';
+import { ResultTeams } from '../ResultTeams';
+import { ControlButtons } from '../ControlButtons';
+import { TeamsInfo } from '../TeamsInfo';
+import { type TResult } from '../../types';
 
 import './styles.css';
-import { Controls } from '../Controls';
-import { Range } from '../../ui/Range';
 
 function App() {
   const [ gamers, setGamers ] = useState<string>(getGamersLS());
@@ -43,8 +44,8 @@ function App() {
   return (
     <div className='wrap'>
       <div className='left-group'>
-        <Range value={teamSize} onChange={rangeHandler} members={filterGamers(gamers).length} />
-        <Controls config={controlsConfig} />
+        <TeamsInfo value={teamSize} onChange={rangeHandler} members={filterGamers(gamers).length} />
+        <ControlButtons config={controlsConfig} />
         <Textarea
           value={gamers}
           onChange={changeHandle}
@@ -53,7 +54,7 @@ function App() {
 
       <div>
         {lastUpdate && <div className='time-stamp'>Updated: {lastUpdate}</div>}
-        <Result result={result} />
+        <ResultTeams result={result} />
       </div>
     </div>
   )

@@ -1,9 +1,10 @@
 import { FC } from 'react'
-import { TResultItem } from '../../utils';
 import './styles.css'
+import { TResultItem } from '../../../types';
 
 type TResultCardProps = {
-  pair: TResultItem,
+  team: TResultItem,
+  size: number,
   id: number,
 }
 
@@ -14,7 +15,9 @@ const trimUserName = (str: string, length: number) => {
   return str.substring(0, length-3)+'...';
 }
 
-const ResultCard: FC<TResultCardProps> = ({ id, pair }) => {
+const ResultCard: FC<TResultCardProps> = ({ id, team, size }) => {
+  const values = Array.from({ length: size }, (_, idx) => team?.[idx] || ``);
+
   return (
   <div
     className='card'
@@ -24,12 +27,12 @@ const ResultCard: FC<TResultCardProps> = ({ id, pair }) => {
       <div className='card-head-id'>{id}</div>
       <div className='card-head-title'>TEAM</div>
     </div>
-    {pair?.map((user, idx) => user && (
+    {values?.map((value, idx) => (
       <div
-        key={`${user}${idx}`}  
+        key={`${value}${idx}`}  
         className='card-gamer'
-        title={user}
-      >{trimUserName(user, 20)}</div>
+        title={value}
+      >{trimUserName(value, 20)}</div>
     ))}
   </div>
 )}

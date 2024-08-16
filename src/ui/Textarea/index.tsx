@@ -18,7 +18,7 @@ const Textarea: FC<TTextareaProps> = ({
 
   return (
     <textarea
-      className='input'
+      className='textarea'
       value={value}
       onChange={textareaHandle}
       placeholder={placeholder}
