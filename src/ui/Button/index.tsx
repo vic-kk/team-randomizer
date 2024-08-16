@@ -3,16 +3,17 @@ import './styles.css'
 
 const TButtonVariant = {
   REGROUP: 'REGROUP',
-  CLEAR: 'CLEAR',
+  RESET: 'RESET',
 }
 
 type TButtonProps = {
   onClick?: () => void,
   text?: string,
+  disabled?: boolean,
   variant: keyof typeof TButtonVariant,
 }
 
-const Button: FC<TButtonProps> = ({ text, onClick, variant }) => {
+const Button: FC<TButtonProps> = ({ text, onClick, disabled = false, variant }) => {
   const buttonClass = TButtonVariant[variant].toLocaleLowerCase();
   const buttonText = text || buttonClass[0].toUpperCase()+buttonClass.slice(1); 
 
@@ -21,12 +22,13 @@ const Button: FC<TButtonProps> = ({ text, onClick, variant }) => {
   };
 
   return (
-    <div
+    <button
       onClick={clickButtonHandler}
       className={`btn btn-${buttonClass}`}
+      disabled={disabled}
     >
       {buttonText}
-    </div>
+    </button>
   )
 }
 

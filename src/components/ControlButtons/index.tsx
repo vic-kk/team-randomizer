@@ -11,7 +11,7 @@ const ControlButtons: FC<TControlButtonsProps> = ({ config }) => {
   return (
     <div className='controls'>
       {config?.map((item, idx) => 
-        <Button key={idx} {...item} />
+        <Button key={idx} {...item} disabled={item.disabled} />
       )}
     </div>
   )

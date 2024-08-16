@@ -32,13 +32,14 @@ function App() {
       }, 150);
       setLastUpdate(new Date().toLocaleString());
     },
+    // disabled: !!filterGamers(gamers).length,
     variant: 'REGROUP',
   },{
     onClick: () => {
       setResult([]);
       setLastUpdate('');
     },
-    variant: 'CLEAR',
+    variant: 'RESET',
   }]
 
   return (

@@ -15,7 +15,7 @@ const TeamsInfo: FC<TTeamsInfoProps> = ({ members, ...props }) => {
         value={props.value}
         max={props.max}
       />
-      {members && <>
+      {!!members && <>
         <div>Active:</div>
         <div>{members}</div>
       </>}
